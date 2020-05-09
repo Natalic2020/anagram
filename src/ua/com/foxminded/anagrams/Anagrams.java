@@ -1,4 +1,4 @@
-package de.com.nata.mentoring1;
+package ua.com.foxminded.anagrams;
 
 import java.io.BufferedReader;
 import java.io.IOException;
