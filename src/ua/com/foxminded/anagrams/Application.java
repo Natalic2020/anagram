@@ -8,10 +8,10 @@ public class Application {
 
 	public static void main(String[] args) throws IOException {
 
-		System.out.print("Input text for reverse: ");
+	    System.out.print("Input text for reverse: ");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-		String inputText = reader.readLine();
+		final String inputText = reader.readLine();
 
 		String[] words = inputText.split(" ");
 		
