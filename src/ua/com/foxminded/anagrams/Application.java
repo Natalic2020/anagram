@@ -3,6 +3,7 @@ package ua.com.foxminded.anagrams;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringJoiner;
 
 public class Application {
 
@@ -17,14 +18,18 @@ public class Application {
 		
 		StringBuffer textReverse = new StringBuffer();
 		
+		StringJoiner sj = new StringJoiner(" ");
+		
 		for (String word : words) {
 			
 			textReverse.append(wordReverse(word)).append(" ");
+			sj.add(wordReverse(word));
+			
 		}
 		
 		System.out.print("Output reversed text:   ");
 		System.out.println(textReverse);
-
+		System.out.println(sj.toString());
 	}
 
 	private static StringBuffer wordReverse(String word) {
