@@ -8,44 +8,12 @@ import java.util.StringJoiner;
 public class Application {
 
 	public static void main(String[] args) throws IOException {
-
-	    System.out.println(Anagram("Go45od mor4ning!"));
 	    
-	}
-
-    private static String Anagram(final String text) throws IOException {
-
-		String[] words = text.split(" ");
-		
-		StringJoiner sj = new StringJoiner(" ");
-		
-		for (String word : words) {
-			
-			sj.add(wordReverse(word));
-		}
-		return sj.toString();
-    }
-
-	private static StringBuilder wordReverse(final String word) {
+	    String textRevers1 =  Anagram.TextRevers("Go45od mor4ning!");
+	    String textRevers2 =  Anagram.TextRevers("Hal67lo 22world");  
 	    
-		StringBuilder wordReverse = new StringBuilder(word).reverse();
-		
-		for (int i = word.length() - 1; i >= 0; i--) {
-
-			if (!Character.isLetter(wordReverse.charAt(i))) {
-
-				wordReverse.deleteCharAt(i);
-			}
-		}
-
-		for (int i = 0; i < word.length(); i++) {
-
-			if (!Character.isLetter(word.charAt(i))) {
-				wordReverse.insert(i, word.charAt(i));
-			}
-		}
-		
-		return wordReverse;
-	}
-	
+	    System.out.println(textRevers1);
+	    System.out.println(textRevers2);
+	    System.out.println(Anagram.TextRevers("Goo01d eve//ning"));  
+	}	
 }
