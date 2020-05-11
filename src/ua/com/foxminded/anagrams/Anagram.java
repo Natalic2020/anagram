@@ -1,25 +1,31 @@
 package ua.com.foxminded.anagrams;
 
-import java.io.IOException;
 import java.util.StringJoiner;
 
 public class Anagram {
     
-    public static String TextRevers(final String text) throws IOException {
+    private static final String SPACE_SIGN = " ";
+    private static final String BLANK = "";
 
-        String[] words = text.split(" ");
+    public String textReverse(final String text) {
+
+        if (text.equals(null)) {
+            return BLANK;
+        }
+
+        String[] words = text.split(SPACE_SIGN);
         
-        StringJoiner sj = new StringJoiner(" ");
+        StringJoiner textReverse = new StringJoiner(SPACE_SIGN);
         
         for (String word : words) {
             
-            sj.add(wordReverse(word));
+            textReverse.add(letterReverseInWord(word));
         }
-        return sj.toString();
+        return textReverse.toString();
     }
        
     
-     private static StringBuilder wordReverse(final String word) {
+    private StringBuilder letterReverseInWord(final String word) {
         
         StringBuilder wordReverse = new StringBuilder(word).reverse();
         
