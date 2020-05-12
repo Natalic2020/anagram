@@ -20,6 +20,7 @@ public class Anagram {
             
             textReverse.add(reverseOnlyLetters(word));
         }
+
         return textReverse.toString();
     }
        
