@@ -5,12 +5,11 @@ import java.util.StringJoiner;
 public class Anagram {
     
     private static final String SPACE_SIGN = " ";
-    private static final String BLANK = "";
 
     public String textReverse(final String text) {
 
         if (text.equals(null)) {
-            return BLANK;
+            return text;
         }
 
         String[] words = text.split(SPACE_SIGN);
