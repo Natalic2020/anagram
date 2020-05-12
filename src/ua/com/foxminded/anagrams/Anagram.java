@@ -18,13 +18,13 @@ public class Anagram {
         
         for (String word : words) {
             
-            textReverse.add(letterReverseInWord(word));
+            textReverse.add(reverseOnlyLetters(word));
         }
         return textReverse.toString();
     }
        
     
-    private StringBuilder letterReverseInWord(final String word) {
+    private StringBuilder reverseOnlyLetters(final String word) {
         
         StringBuilder wordReverse = new StringBuilder(word).reverse();
         
