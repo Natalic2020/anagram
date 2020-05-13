@@ -6,7 +6,7 @@ public class Anagram {
     
     private static final String SPACE_SIGN = " ";
 
-    public String textReverse(final String text) {
+    public String textReverseOnlyLetters(final String text) {
 
         if (text == null) {
             return text;
