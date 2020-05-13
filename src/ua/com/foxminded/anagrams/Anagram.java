@@ -8,7 +8,7 @@ public class Anagram {
 
     public String textReverse(final String text) {
 
-        if (text != null) {
+        if (text == null) {
             return text;
         }
 
