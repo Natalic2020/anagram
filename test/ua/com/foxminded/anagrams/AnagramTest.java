@@ -9,15 +9,21 @@ class AnagramTest {
     Anagram anagram = new Anagram();
 
     @Test
-    void testTextReverseOnlyLettersNull() {
+    void testTextReverseOnlyLettersGetNullSendNull() {
 
-        assertEquals(null, anagram.textReverseOnlyLetters(null));
+        final String inputResult = null;
+        final String expectedResult = null;
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
     }
 
     @Test
-    void testTextReverseOnlyLetters() {
+    void testTextReverseOnlyLettersOutputTextInputText() {
 
-        assertEquals("do45oG gni4nrom!", anagram.textReverseOnlyLetters("Go45od mor4ning!"));
+        final String inputResult = "Go45od mor4ning!";
+        final String expectedResult = "do45oG gni4nrom!";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
     }
 
 }
