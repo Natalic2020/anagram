@@ -45,6 +45,33 @@ class AnagramTest {
     }
 
     @Test
+    void testTextReverseOnlyLetters_shouldReturnWhiteSpaceOneLetter_whenInputWhiteSpaceOneLetter() {
+
+        final String inputResult = " g";
+        final String expectedResult = " g";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnOneLetterWhiteSpace_whenInputOneLetterWhiteSpace() {
+
+        final String inputResult = "g ";
+        final String expectedResult = "g ";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnOneLetter2WhiteSpace_whenInputOneLetter2WhiteSpace() {
+
+        final String inputResult = "g ";
+        final String expectedResult = "g ";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
     void testTextReverseOnlyLetters_shouldReturnOneNumber_whenInputOneNumber() {
 
         final String inputResult = "5";
@@ -58,6 +85,51 @@ class AnagramTest {
 
         final String inputResult = "*";
         final String expectedResult = "*";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnQuote_whenInputQuote() {
+
+        final String inputResult = "'";
+        final String expectedResult = "'";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnDoubleQuote_whenInputDoubleQuote() {
+
+        final String inputResult = "\"";
+        final String expectedResult = "\"";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnSlash_whenInputSlash() {
+
+        final String inputResult = "/";
+        final String expectedResult = "/";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnBackSlash_whenInputBackSlash() {
+
+        final String inputResult = "\\";
+        final String expectedResult = "\\";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnDoubleQuoteBackSlash_whenInputDoubleQuoteBackSlash() {
+
+        final String inputResult = "\"\\";
+        final String expectedResult = "\"\\";
 
         assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
     }
@@ -145,6 +217,15 @@ class AnagramTest {
 
         final String inputResult = "Hallo  2my   3Friend  2!";
         final String expectedResult = "ollaH  2ym   3dneirF  2!";
+
+        assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
+    }
+
+    @Test
+    void testTextReverseOnlyLetters_shouldReturnFewWordsFewWhiteSpacesInTheEnd_whenInputFewWordsFewWhiteSpacesInTheEnd() {
+
+        final String inputResult = "Hallo  2my   3Friend  2!   ";
+        final String expectedResult = "ollaH  2ym   3dneirF  2!   ";
 
         assertEquals(expectedResult, anagram.textReverseOnlyLetters(inputResult));
     }

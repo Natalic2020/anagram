@@ -5,6 +5,7 @@ import java.util.StringJoiner;
 public class Anagram {
     
     private static final String SPACE_SIGN = " ";
+    private static final String BLANK = "";
 
     public String textReverseOnlyLetters(final String text) {
 
@@ -19,6 +20,10 @@ public class Anagram {
         for (String word : words) {
             
             textReverse.add(reverseOnlyLetters(word));
+        }
+
+        while (textReverse.length() < text.length()) {
+            textReverse.add("");
         }
 
         return textReverse.toString();
