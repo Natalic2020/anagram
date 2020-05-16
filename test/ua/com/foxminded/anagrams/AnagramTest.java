@@ -11,232 +11,232 @@ class AnagramTest {
     @Test
     void testTextReverseOnlyLetters_shouldReturnNull_whenInputNull() {
 
-        final String inputResult = null;
-        final String textReverseNull = anagram.textReverseOnlyLetters(inputResult);
+        final String input = null;
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseNull);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnEmptyString_whenInputEmptyString() {
 
-        final String inputResult = "";
-        final String textReverseEmptyString = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseEmptyString);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnWhiteSpace_whenInputWhiteSpace() {
 
-        final String inputResult = " ";
-        final String textReverseWhiteSpace = anagram.textReverseOnlyLetters(inputResult);
+        final String input = " ";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseWhiteSpace);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOneLetter_whenInputOneLetter() {
 
-        final String inputResult = "g";
-        final String textReverseOneLetter = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "g";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseOneLetter);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnWhiteSpaceOneLetter_whenInputWhiteSpaceOneLetter() {
 
-        final String inputResult = " g";
-        final String textReverseWhiteSpaceOneLetter = anagram.textReverseOnlyLetters(inputResult);
+        final String input = " g";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseWhiteSpaceOneLetter);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOneLetterWhiteSpace_whenInputOneLetterWhiteSpace() {
 
-        final String inputResult = "g ";
-        final String textReverseOneLetterWhiteSpace = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "g ";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseOneLetterWhiteSpace);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOneLetter2WhiteSpace_whenInputOneLetter2WhiteSpace() {
 
-        final String inputResult = "g  ";
-        final String textReverseOneLetter2WhiteSpace = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "g  ";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseOneLetter2WhiteSpace);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOneNumber_whenInputOneNumber() {
 
-        final String inputResult = "5";
-        final String textReverseOneNumber = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "5";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseOneNumber);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnSpecialCharacter_whenInputSpecialCharacter() {
 
-        final String inputResult = "*";
-        final String textReverseSpecialCharacter = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "*";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseSpecialCharacter);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnQuote_whenInputQuote() {
 
-        final String inputResult = "'";
-        final String textReverseQuote = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "'";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseQuote);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnDoubleQuote_whenInputDoubleQuote() {
 
-        final String inputResult = "\"";
-        final String textReverseDoubleQuote = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "\"";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseDoubleQuote);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnSlash_whenInputSlash() {
 
-        final String inputResult = "/";
-        final String textReverseSlash = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "/";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseSlash);
+        assertEquals(input, actual);
     }
+
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnBackSlash_whenInputBackSlash() {
 
-        final String inputResult = "\\";
-        final String textReverseBackSlash = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "\\";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseBackSlash);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnDoubleQuoteBackSlash_whenInputDoubleQuoteBackSlash() {
 
-        final String inputResult = "\"\\";
-        final String textReverseDoubleQuoteBackSlash = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "\"\\";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseDoubleQuoteBackSlash);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOneLetterFewTimes_whenInputOneLetterFewTimes() {
 
-        final String inputResult = "ggggg";
-        final String textReverseOneLetterFewTimes = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "ggggg";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseOneLetterFewTimes);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOneNumberFewTimes_whenInputOneNumberFewTime() {
 
-        final String inputResult = "55555";
-        final String textReverseOneNumberFewTimes = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "55555";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseOneNumberFewTimes);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOneLetterFewTimesUpperLowercased_whenInputOneLetterFewTimesUpperLowercased() {
 
-        final String inputResult = "GGGggggg";
-        final String textReverseOneLetterFewTimesUpperLowercased = anagram.textReverseOnlyLetters(inputResult);
-        final String expectedResult = "gggggGGG";
+        final String input = "GGGggggg";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = "gggggGGG";
 
-        assertEquals(expectedResult, textReverseOneLetterFewTimesUpperLowercased);
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnOnlySpecialCharacters_whenInputOnlySpecialCharacters() {
 
-        final String inputResult = "!@*/&%$§";
-        final String textReverseOnlySpecialCharacters = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "!@*/&%$§";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseOnlySpecialCharacters);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnSpecialCharacterUndLettersOneWord_whenInputSpecialCharacterUndLettersOneWord() {
 
-        final String inputResult = "H§al%lo";
-        final String textReverseSpecialCharacterUndLettersOneWord = anagram.textReverseOnlyLetters(inputResult);
-        final String expectedResult = "o§ll%aH";
+        final String input = "H§al%lo";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = "o§ll%aH";
 
-        assertEquals(expectedResult, textReverseSpecialCharacterUndLettersOneWord);
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnSpecialCharacterUndNumbersOneWord_whenInputSpecialCharacterUndNumbersOneWord() {
 
-        final String inputResult = "1!2§3$5%";
-        final String textReverseSpecialCharacterUndNumbersOneWord = anagram.textReverseOnlyLetters(inputResult);
+        final String input = "1!2§3$5%";
+        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(inputResult, textReverseSpecialCharacterUndNumbersOneWord);
+        assertEquals(input, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnFewWordsOnlyLetter_whenInputFewWordsOnlyLetter() {
 
-        final String inputResult = "It is a nice day today";
-        final String textReverseFewWordsOnlyLetter = anagram.textReverseOnlyLetters(inputResult);
-        final String expectedResult = "tI si a ecin yad yadot";
+        final String input = "It is a nice day today";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = "tI si a ecin yad yadot";
 
-        assertEquals(expectedResult, textReverseFewWordsOnlyLetter);
+        assertEquals(expected, actual);
     }
     @Test
     void testTextReverseOnlyLetters_shouldReturnFewWordsLetterUndNumbers_whenInputFewWordsLetterUndNumbers() {
 
-        final String inputResult = "It is 5da6y today";
-        final String textReverseFewWordsLetterUndNumbers = anagram.textReverseOnlyLetters(inputResult);
-        final String expectedResult = "tI si 5ya6d yadot";
+        final String input = "It is 5da6y today";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = "tI si 5ya6d yadot";
 
-        assertEquals(expectedResult, textReverseFewWordsLetterUndNumbers);
+        assertEquals(expected, actual);
     }
     @Test
     void testTextReverseOnlyLetters_shouldReturnFewWordsLettersNumbersCharacters_whenInputLettersNumbersCharacters() {
 
-        final String inputResult = "It is6 a nic%e day to6d7ay!";
-        final String textReverseFewWordsLettersNumbersCharacters = anagram.textReverseOnlyLetters(inputResult);
-        final String expectedResult = "tI si6 a eci%n yad ya6d7ot!";
+        final String input = "It is6 a nic%e day to6d7ay!";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = "tI si6 a eci%n yad ya6d7ot!";
 
-        assertEquals(expectedResult, textReverseFewWordsLettersNumbersCharacters);
+        assertEquals(expected, actual);
     }
     @Test
     void testTextReverseOnlyLetters_shouldReturnFewWordsFewWhiteSpaces_whenInputFewWordsFewWhiteSpaces() {
 
-        final String inputResult = "Hallo  2my   3Friend  2!";
-        final String textReverseFewWordsFewWhiteSpaces = anagram.textReverseOnlyLetters(inputResult);
-        final String expectedResult = "ollaH  2ym   3dneirF  2!";
+        final String input = "Hallo  2my   3Friend  2!";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = "ollaH  2ym   3dneirF  2!";
 
-        assertEquals(expectedResult, textReverseFewWordsFewWhiteSpaces);
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTextReverseOnlyLetters_shouldReturnFewWordsFewWhiteSpacesInTheEnd_whenInputFewWordsFewWhiteSpacesInTheEnd() {
 
-        final String inputResult = "Hallo  2my   3Friend  2!   ";
-        final String textReverseFewWordsFewWhiteSpacesInTheEnd = anagram.textReverseOnlyLetters(inputResult);
-        final String expectedResult = "ollaH  2ym   3dneirF  2!   ";
+        final String input = "Hallo  2my   3Friend  2!   ";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = "ollaH  2ym   3dneirF  2!   ";
 
-        assertEquals(expectedResult, textReverseFewWordsFewWhiteSpacesInTheEnd);
+        assertEquals(expected, actual);
     }
 
 }
-
 
