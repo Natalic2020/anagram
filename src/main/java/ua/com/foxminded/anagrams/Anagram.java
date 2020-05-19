@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 public class Anagram {
 
     private static final String REGEX_SPLIT_KEEP_WHITESPACE = "((?<=\\s)|(?=\\s))";
-    private static final String BLANK = "";
+    private static final String EMPTY_STRING = "";
 
     public String textReverseOnlyLetters(final String text) {
 
@@ -15,7 +15,7 @@ public class Anagram {
 
         String[] words = text.split(REGEX_SPLIT_KEEP_WHITESPACE);
 
-        StringJoiner textReverse = new StringJoiner(BLANK);
+        StringJoiner textReverse = new StringJoiner(EMPTY_STRING);
 
         for (String word : words) {
 
