@@ -4,26 +4,22 @@ import java.util.StringJoiner;
 
 public class Anagram {
 
-    private static final String SPACE_SIGN = " ";
+    private static final String REGEX_SPLIT_KEEP_WHITESPACE = "((?<=\\s)|(?=\\s))";
     private static final String BLANK = "";
 
     public String textReverseOnlyLetters(final String text) {
 
         if (text == null) {
-            return text;
+            throw new IllegalArgumentException("Null parameters are not allowed");
         }
 
-        String[] words = text.split(SPACE_SIGN);
+        String[] words = text.split(REGEX_SPLIT_KEEP_WHITESPACE);
 
-        StringJoiner textReverse = new StringJoiner(SPACE_SIGN);
+        StringJoiner textReverse = new StringJoiner(BLANK);
 
         for (String word : words) {
 
             textReverse.add(reverseOnlyLetters(word));
-        }
-
-        while (textReverse.length() < text.length()) {
-            textReverse.add(BLANK);
         }
 
         return textReverse.toString();
