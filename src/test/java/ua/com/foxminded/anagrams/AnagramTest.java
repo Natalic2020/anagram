@@ -1,6 +1,7 @@
 package test.java.ua.com.foxminded.anagrams;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,21 +12,37 @@ class AnagramTest {
     Anagram anagram = new Anagram();
 
     @Test
-    void textReverseOnlyLetters_shouldReturnNull_whenInputNull() {
+    void textReverseOnlyLetters_shouldThrowIllegalArgumentException_whenInputNull() {
 
         final String input = null;
-        final String actual = anagram.textReverseOnlyLetters(input);
 
-        assertEquals(input, actual);
+        assertThrows(IllegalArgumentException.class, () -> {
+            anagram.textReverseOnlyLetters(input);
+        });
     }
+
+    @Test
+    void textReverseOnlyLetters_shouldMessageIllegalArgumentException_whenInputNull() {
+
+        final String input = null;
+        final String expected = "Null parameters are not allowed";
+
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
+            anagram.textReverseOnlyLetters(input);
+        });
+
+        assertEquals(expected, exception.getMessage());
+    }
+
 
     @Test
     void textReverseOnlyLetters_shouldReturnEmptyString_whenInputEmptyString() {
 
         final String input = "";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -33,8 +50,19 @@ class AnagramTest {
 
         final String input = " ";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void textReverseOnlyLetters_shouldReturnFewWhiteSpace_whenInputWhiteSpaces() {
+
+        final String input = "     ";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
+
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -42,8 +70,9 @@ class AnagramTest {
 
         final String input = "g";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -51,8 +80,9 @@ class AnagramTest {
 
         final String input = " g";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -60,26 +90,41 @@ class AnagramTest {
 
         final String input = "g ";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnOneLetter2WhiteSpace_whenInputOneLetter2WhiteSpace() {
+    void textReverseOnlyLetters_shouldReturnOneLetterFewWhiteSpacesAtTheBeginning_whenInputOneLetterFewWhiteSpacesAtTheBeginning() {
 
-        final String input = "g  ";
+        final String input = "         g";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
+
+
+    @Test
+    void textReverseOnlyLetters_shouldReturnOneLetterFewWhiteSpacesAtTheEnd_whenInputOneLetterFewWhiteSpacesAtTheEnd() {
+
+        final String input = "g     ";
+        final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
+
+        assertEquals(expected, actual);
+    }
+
 
     @Test
     void textReverseOnlyLetters_shouldReturnOneNumber_whenInputOneNumber() {
 
         final String input = "5";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -87,8 +132,9 @@ class AnagramTest {
 
         final String input = "*";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -96,8 +142,9 @@ class AnagramTest {
 
         final String input = "'";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -105,8 +152,9 @@ class AnagramTest {
 
         final String input = "\"";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -114,8 +162,9 @@ class AnagramTest {
 
         final String input = "/";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -123,8 +172,9 @@ class AnagramTest {
 
         final String input = "\\";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -132,8 +182,9 @@ class AnagramTest {
 
         final String input = "\"\\";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -141,8 +192,9 @@ class AnagramTest {
 
         final String input = "ggggg";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -150,8 +202,9 @@ class AnagramTest {
 
         final String input = "55555";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -169,8 +222,9 @@ class AnagramTest {
 
         final String input = "!@*/&%$§";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -188,8 +242,9 @@ class AnagramTest {
 
         final String input = "1!2§3$5%";
         final String actual = anagram.textReverseOnlyLetters(input);
+        final String expected = input;
 
-        assertEquals(input, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -232,15 +287,6 @@ class AnagramTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    void textReverseOnlyLetters_shouldReturnFewWordsFewWhiteSpacesInTheEnd_whenInputFewWordsFewWhiteSpacesInTheEnd() {
-
-        final String input = "Hallo  2my   3Friend  2!   ";
-        final String actual = anagram.textReverseOnlyLetters(input);
-        final String expected = "ollaH  2ym   3dneirF  2!   ";
-
-        assertEquals(expected, actual);
-    }
 
 }
 
