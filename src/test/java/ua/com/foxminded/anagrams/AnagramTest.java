@@ -62,7 +62,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnTheSame_whenInputWhiteSpaceOneLetter() {
+    void textReverseOnlyLetters_shouldReturnKeepWhiteSpace_whenInputStartWithWhiteSpace() {
 
         final String input = " g";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -72,7 +72,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnTheSame_whenInputOneLetterWhiteSpace() {
+    void textReverseOnlyLetters_shouldReturnKeepWhiteSpace_whenInputTailWithWhiteSpace() {
 
         final String input = "g ";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -123,47 +123,6 @@ class AnagramTest {
         assertEquals(expected, actual);
     }
 
-
-    @Test
-    void textReverseOnlyLetters_shouldReturnTheSame_whenInputDoubleQuote() {
-
-        final String input = "\"";
-        final String actual = anagram.textReverseOnlyLetters(input);
-        final String expected = input;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void textReverseOnlyLetters_shouldReturnSlash_whenInputSlash() {
-
-        final String input = "/";
-        final String actual = anagram.textReverseOnlyLetters(input);
-        final String expected = input;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void textReverseOnlyLetters_shouldReturnBackSlash_whenInputBackSlash() {
-
-        final String input = "\\";
-        final String actual = anagram.textReverseOnlyLetters(input);
-        final String expected = input;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void textReverseOnlyLetters_shouldReturnTheSame_whenInputDoubleQuoteBackSlash() {
-
-        final String input = "\"\\";
-        final String actual = anagram.textReverseOnlyLetters(input);
-        final String expected = input;
-
-        assertEquals(expected, actual);
-    }
-
     @Test
     void textReverseOnlyLetters_shouldReturnTheSame_whenInputOneLetterFewTimes() {
 
@@ -185,7 +144,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReverseLetters_whenInputOneLetterFewTimesUpperLowercased() {
+    void textReverseOnlyLetters_shouldReverseAllLetters_whenInputOneLetterFewTimesUpperLowercased() {
 
         final String input = "GGGggggg";
         final String actual = anagram.textReverseOnlyLetters(input);
