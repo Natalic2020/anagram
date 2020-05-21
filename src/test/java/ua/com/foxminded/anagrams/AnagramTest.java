@@ -1,11 +1,9 @@
-package test.java.ua.com.foxminded.anagrams;
+package ua.com.foxminded.anagrams;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
-
-import main.java.ua.com.foxminded.anagrams.Anagram;
 
 class AnagramTest {
 
@@ -91,7 +89,6 @@ class AnagramTest {
         assertEquals(expected, actual);
     }
 
-
     @Test
     void textReverseOnlyLetters_shouldReturnTheSame_whenInputWhiteSpacesAtTheEnd() {
 
@@ -101,7 +98,6 @@ class AnagramTest {
 
         assertEquals(expected, actual);
     }
-
 
     @Test
     void textReverseOnlyLetters_shouldReturnTheSame_whenInputOneNumber() {
