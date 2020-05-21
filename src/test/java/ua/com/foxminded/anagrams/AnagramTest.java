@@ -20,7 +20,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnEmptyString_whenInputEmptyString() {
+    void textReverseOnlyLetters_shouldReturnTheSame_whenInputEmptyString() {
 
         final String input = "";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -60,7 +60,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnKeepWhiteSpace_whenInputStartWithWhiteSpace() {
+    void textReverseOnlyLetters_shouldKeepHeadWhitespace__whenInputStarstWithWhitespace() {
 
         final String input = " g";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -70,7 +70,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnKeepWhiteSpace_whenInputTailWithWhiteSpace() {
+    void textReverseOnlyLetters_shouldKeepTailWhitespace__whenInputEndstWithWhitespace() {
 
         final String input = "g ";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -80,7 +80,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnTheSame_whenInputWhiteSpacesAtTheBeginning() {
+    void textReverseOnlyLetters_shouldKeepNumberHeadWhitespaces__whenInputStarstWithFewWhitespaces() {
 
         final String input = "         g";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -90,7 +90,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnTheSame_whenInputWhiteSpacesAtTheEnd() {
+    void textReverseOnlyLetters_shouldKeepNumberTailWhitespaces__whenInputEndstWithFewWhitespaces() {
 
         final String input = "g     ";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -120,7 +120,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReturnTheSame_whenInputOneLetterFewTimes() {
+    void textReverseOnlyLetters_shouldReturnTheSame_whenInputOneLetterFewTimesLowecased() {
 
         final String input = "ggggg";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -180,7 +180,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReverseOnlyLetters_whenInputFewWordsOnlyLetter() {
+    void textReverseOnlyLetters_shouldReverseAllLetters_whenInputFewWordsOnlyLetter() {
 
         final String input = "It is a nice day today";
         final String actual = anagram.textReverseOnlyLetters(input);
