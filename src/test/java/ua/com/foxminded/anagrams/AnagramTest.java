@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+
 class AnagramTest {
 
     Anagram anagram = new Anagram();
@@ -170,7 +171,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReverseAllLetters_whenInputFewWordsOnlyLetters() {
+    void textReverseOnlyLetters_shouldReverseAllLettersEachWord_whenInputFewWordsOnlyLetters() {
 
         final String input = "It is a nice day today";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -180,7 +181,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReverseOnlyLetters_whenInputFewWordsLettersUndNumbers() {
+    void textReverseOnlyLetters_shouldReverseOnlyLettersEachWord_whenInputFewWordsLettersUndNumbers() {
 
         final String input = "It is 5da6y today";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -190,7 +191,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReverseOnlyLetters_whenInputLettersNumbersCharacters() {
+    void textReverseOnlyLetters_shouldReverseOnlyLettersEachWord_whenInputLettersNumbersCharacters() {
 
         final String input = "It is6 a nic%e day to6d7ay!";
         final String actual = anagram.textReverseOnlyLetters(input);
@@ -200,7 +201,7 @@ class AnagramTest {
     }
 
     @Test
-    void textReverseOnlyLetters_shouldReverseOnlyLetters_whenInputFewWordsFewWhitespaces() {
+    void textReverseOnlyLetters_shouldReverseOnlyLettersEachWord_whenInputFewWordsFewWhitespaces() {
 
         final String input = "Hallo  2my   3Friend  2!";
         final String actual = anagram.textReverseOnlyLetters(input);
