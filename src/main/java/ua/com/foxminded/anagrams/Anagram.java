@@ -10,9 +10,10 @@ public class Anagram {
             throw new IllegalArgumentException("Null parameters are not allowed");
         }
 
+        final String wordSeparator = " ";
         final String textPlusSignAtTheEnd = text + "$";
-        String[] words = textPlusSignAtTheEnd.split(" ");
-        StringJoiner textReverse = new StringJoiner(" ");
+        String[] words = textPlusSignAtTheEnd.split(wordSeparator);
+        StringJoiner textReverse = new StringJoiner(wordSeparator);
 
         for (String word : words) {
             textReverse.add(reverseOnlyLetters(word));
