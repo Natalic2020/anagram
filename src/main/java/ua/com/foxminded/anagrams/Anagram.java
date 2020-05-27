@@ -4,24 +4,24 @@ import java.util.StringJoiner;
 
 public class Anagram {
 
-    public String textReverseOnlyLetters(final String text) {
+    public String reverseOnlyLetters(final String text) {
 
         if (text == null) {
             throw new IllegalArgumentException("Null parameters are not allowed");
         }
 
-        final String wordSeparator = " ";
+        final String WORD_SEPARATOR = " ";
         final String textPlusSignAtTheEnd = text + "$";
-        String[] words = textPlusSignAtTheEnd.split(wordSeparator);
-        StringJoiner textReverse = new StringJoiner(wordSeparator);
+        String[] words = textPlusSignAtTheEnd.split(WORD_SEPARATOR);
+        StringJoiner textReverse = new StringJoiner(WORD_SEPARATOR);
 
         for (String word : words) {
-            textReverse.add(reverseOnlyLetters(word));
+            textReverse.add(reverseOnlyLettersInWord(word));
         }
         return textReverse.toString().substring(0, textReverse.length() - 1);
     }
 
-    private StringBuilder reverseOnlyLetters(final String word) {
+    private StringBuilder reverseOnlyLettersInWord(final String word) {
 
         StringBuilder wordReverse = new StringBuilder(word).reverse();
 

@@ -9,7 +9,7 @@ public class Application {
 
         for (String input : textForRevers) {
             try {
-                System.out.println("Your result is: " + anagram.textReverseOnlyLetters(input));
+                System.out.println("Your result is: " + anagram.reverseOnlyLetters(input));
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid  input:\"" + e.getMessage() + "\"");
             }
