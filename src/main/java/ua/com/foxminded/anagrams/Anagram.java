@@ -4,13 +4,14 @@ import java.util.StringJoiner;
 
 public class Anagram {
 
+    private final static String WORD_SEPARATOR = " ";
+
     public String reverseOnlyLetters(final String text) {
 
         if (text == null) {
             throw new IllegalArgumentException("Null parameters are not allowed");
         }
 
-        final String WORD_SEPARATOR = " ";
         final String textPlusSignAtTheEnd = text + "$";
         String[] words = textPlusSignAtTheEnd.split(WORD_SEPARATOR);
         StringJoiner textReverse = new StringJoiner(WORD_SEPARATOR);
