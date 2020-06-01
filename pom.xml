@@ -4,7 +4,7 @@
   <artifactId>Mentoring1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Mentoring Program</name>
-  <description>convert to maven program</description>
+  <description>Application to revers only letters in text</description>
  <properties>
         <junit-jupiter.version>5.6.0</junit-jupiter.version>
         <maven.compiler.source>1.8</maven.compiler.source>
